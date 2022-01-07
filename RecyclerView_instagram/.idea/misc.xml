@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/RecyclerView_instagram/app/src/main/res/layout/activity_main.xml" value="0.25364583333333335" />
+        <entry key="..\:/RecyclerView_instagram/app/src/main/res/layout/instagram_item.xml" value="0.25364583333333335" />
         <entry key="..\:/RecyclerView_instargram/app/src/main/res/layout/activity_main.xml" value="0.2390625" />
         <entry key="..\:/RecyclerView_instargram/app/src/main/res/layout/instagram_item.xml" value="0.264" />
       </map>

@@ -17,10 +17,10 @@ public class InstagramAdapter extends RecyclerView.Adapter<InstagramAdapter.View
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
 
-        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View itemView = inflater.inflate(R.layout.instagram_item, parent, false);
+        LayoutInflater inflater = LayoutInflater.from(viewGroup.getContext());
+        View itemView = inflater.inflate(R.layout.instagram_item, viewGroup, false);
 
         return new ViewHolder(itemView);
     }
@@ -45,9 +45,9 @@ public class InstagramAdapter extends RecyclerView.Adapter<InstagramAdapter.View
         ImageView imageView4;
         ImageView imageView5;
 
-        TextView name;
-        TextView like;
-        TextView tag;
+        TextView textView;
+        TextView textView2;
+        TextView textView3;
 
         public ViewHolder(View itemView){
             super(itemView);
@@ -57,9 +57,9 @@ public class InstagramAdapter extends RecyclerView.Adapter<InstagramAdapter.View
             imageView4 = itemView.findViewById(R.id.imageView4);
             imageView5 = itemView.findViewById(R.id.imageView5);
 
-            name = itemView.findViewById(R.id.name);
-            like = itemView.findViewById(R.id.like);
-            tag = itemView.findViewById(R.id.tag);
+            textView = itemView.findViewById(R.id.name);
+            textView2 = itemView.findViewById(R.id.like);
+            textView3 = itemView.findViewById(R.id.tag);
 
         }
 
@@ -69,6 +69,10 @@ public class InstagramAdapter extends RecyclerView.Adapter<InstagramAdapter.View
             imageView3.setImageResource(item.getImage3());
             imageView4.setImageResource(item.getImage4());
             imageView5.setImageResource(item.getImage5());
+
+            textView.setText(item.getName());
+            textView2.setText(item.getLike());
+            textView3.setText(item.getTag());
         }
     }
     //어댑터가 각가의 아이템을 위한 Instagram 객체를 ArrayList 안에 넣어 관리하기 때문에

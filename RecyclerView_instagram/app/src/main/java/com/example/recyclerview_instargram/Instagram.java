@@ -7,9 +7,9 @@ public class Instagram {
     int image3;
     int image4;
     int image5;
-    String username;
-    String likecount;
-    String hashtag;
+    String name;
+    String like;
+    String tag;
 
     public Instagram(int img, int img2, int img3, int img4, int img5, String name, String like, String tag){
         this.image = img;
@@ -17,9 +17,9 @@ public class Instagram {
         this.image3 = img3;
         this.image4 = img4;
         this.image5 = img5;
-        this.username = name;
-        this.likecount = like;
-        this.hashtag =tag;
+        this.name = name;
+        this.like = like;
+        this.tag =tag;
     }
 
     public int getImage() {
@@ -42,16 +42,16 @@ public class Instagram {
         return image5;
     }
 
-    public String getUsername() {
-        return username;
+    public String getName() {
+        return name;
     }
 
-    public String getLikecount() {
-        return likecount;
+    public String getLike() {
+        return like;
     }
 
-    public String getHashtag() {
-        return hashtag;
+    public String getTag() {
+        return tag;
     }
 
     public void setImage(int image) {
@@ -74,15 +74,15 @@ public class Instagram {
         this.image5 = image5;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setLikecount(String likecount) {
-        this.likecount = likecount;
+    public void setLike(String like) {
+        this.like = like;
     }
 
-    public void setHashtag(String hashtag) {
-        this.hashtag = hashtag;
+    public void setTag(String tag) {
+        this.tag = tag;
     }
 }
