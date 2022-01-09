@@ -41,6 +41,9 @@ public class Cf_Item  extends RecyclerView.ViewHolder{
         imageView4.setImageResource(item.getImage4());
 
         textView.setText(item.getName());
+        textView.setText(item.getBrand_name());
+        textView.setText(item.getBrand_color());
+        textView.setText(item.getBrand_price());
 
     }
 }
