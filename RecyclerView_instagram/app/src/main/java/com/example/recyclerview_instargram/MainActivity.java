@@ -6,6 +6,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.example.recyclerview_instargram.Data.CfData;
+import com.example.recyclerview_instargram.Data.InsData;
+
 public class MainActivity extends AppCompatActivity {
 
 
@@ -25,21 +28,27 @@ public class MainActivity extends AppCompatActivity {
 
         InstagramAdapter adapter = new InstagramAdapter();
 
-        adapter.addItem(new Instagram(R.mipmap.ic_launcher, R.drawable.ic_launcher_background, R.drawable.ic_launcher_background,
-                R.drawable.ic_launcher_background, R.drawable.ic_launcher_background, "허주선", "200개", "#팔로우 #맞팔 #선팔"));
+        adapter.addItem(new InsData(R.mipmap.ic_launcher, R.drawable.ic_launcher_background, R.drawable.ic_launcher_background,
+                R.drawable.ic_launcher_background, R.drawable.ic_launcher_background, 0, "허주선", "200개", "#팔로우 #맞팔 #선팔"));
 
-        adapter.addItem(new Instagram(R.mipmap.ic_launcher, R.drawable.ic_launcher_background, R.drawable.ic_launcher_background,
-                R.drawable.ic_launcher_background, R.drawable.ic_launcher_background, "믓쨍이", "171개", "팔로우 #맞팔 #선팔"));
+        adapter.addItem2(new CfData(R.drawable.ic_launcher_background, R.drawable.ic_launcher_background, R.drawable.ic_launcher_background,
+                R.drawable.ic_launcher_background, 1, "인스타", "나이키", "색상", "100원"));
 
-        adapter.addItem(new Instagram(R.mipmap.ic_launcher, R.drawable.ic_launcher_background, R.drawable.ic_launcher_background,
-                R.drawable.ic_launcher_background, R.drawable.ic_launcher_background, "여행", "20K", "팔로우 #맞팔 #선팔"));
+        adapter.addItem(new InsData(R.mipmap.ic_launcher, R.drawable.ic_launcher_background, R.drawable.ic_launcher_background,
+                R.drawable.ic_launcher_background, R.drawable.ic_launcher_background, 0, "믓쨍이", "171개", "팔로우 #맞팔 #선팔"));
 
-        adapter.addItem(new Instagram(R.mipmap.ic_launcher, R.drawable.ic_launcher_background, R.drawable.ic_launcher_background,
-                R.drawable.ic_launcher_background, R.drawable.ic_launcher_background, "운동", "48개", "팔로우 #맞팔 #선팔 #헬린"));
+        adapter.addItem(new InsData(R.mipmap.ic_launcher, R.drawable.ic_launcher_background, R.drawable.ic_launcher_background,
+                R.drawable.ic_launcher_background, R.drawable.ic_launcher_background, 0, "여행", "20K", "팔로우 #맞팔 #선팔"));
 
-        adapter.addItem(new Instagram(R.mipmap.ic_launcher, R.drawable.ic_launcher_background, R.drawable.ic_launcher_background,
-                R.drawable.ic_launcher_background, R.drawable.ic_launcher_background, "음식", "67개", "팔로우 #맞팔 #선팔 #맛집"));
+        adapter.addItem(new InsData(R.mipmap.ic_launcher, R.drawable.ic_launcher_background, R.drawable.ic_launcher_background,
+                R.drawable.ic_launcher_background, R.drawable.ic_launcher_background, 0, "운동", "48개", "팔로우 #맞팔 #선팔 #헬린"));
 
+        adapter.addItem(new InsData(R.mipmap.ic_launcher, R.drawable.ic_launcher_background, R.drawable.ic_launcher_background,
+                R.drawable.ic_launcher_background, R.drawable.ic_launcher_background, 0, "음식", "67개", "팔로우 #맞팔 #선팔 #맛집"));
+
+
+
+        //recyclerview 화면 연결
         recycler_view.setAdapter(adapter);
     }
 }
