@@ -3,8 +3,7 @@ package com.example.recyclerview_instargram;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
+
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -55,13 +54,14 @@ public class InstagramAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         //items 데이터가 리스트의 4번째 데이터라면 position으로 4가 들어온다
 
         Object obj = items.get(position);
-
         if (obj instanceof InsData){
+
             InsData ins = (InsData) obj;
             Ins_Item insItem = (Ins_Item) viewHolder;
             insItem.setItem(ins);
 
         }else if (obj instanceof CfData){
+
             CfData cf = (CfData) obj;
             Cf_Item cfItem = (Cf_Item) viewHolder;
             cfItem.setItem(cf);
@@ -71,17 +71,23 @@ public class InstagramAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
     }
 
     @Override
-    public int getItemCount() { //먼저 실행, ArrayList<InsData> items에 담겨있는 개수 반환(MainActivity에 addItem 총 5개)
+    public int getItemCount() {
+        //먼저 실행, ArrayList<Object> items에 담겨있는 개수 반환(MainActivity에 addItem 총 6개)
         return items.size();
     }
+
+
 
     @Override
     public int getItemViewType(int position) {
         Object obj = items.get(position);
         if (obj instanceof InsData){
+
             InsData ins = (InsData) obj;
             return  ins.getType();
+
         }else if (obj instanceof CfData){
+
             CfData cf = (CfData) obj;
             return  cf.getType();
         }
