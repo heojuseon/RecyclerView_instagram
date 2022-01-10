@@ -25,12 +25,12 @@ public class Ins_Item  extends RecyclerView.ViewHolder{
     public Ins_Item(View itemView){
         super(itemView);
         imageView = itemView.findViewById(R.id.imageView);
-        imageView2 = itemView.findViewById(R.id.cf_imageView);
+        imageView2 = itemView.findViewById(R.id.imageView2);
         imageView3 = itemView.findViewById(R.id.imageView3);
         imageView4 = itemView.findViewById(R.id.imageView4);
         imageView5 = itemView.findViewById(R.id.imageView5);
 
-        textView = itemView.findViewById(R.id.cf_name);
+        textView = itemView.findViewById(R.id.name);
         textView2 = itemView.findViewById(R.id.like);
         textView3 = itemView.findViewById(R.id.tag);
 

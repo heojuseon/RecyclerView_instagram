@@ -7,7 +7,6 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.recyclerview_instargram.Data.CfData;
-import com.example.recyclerview_instargram.Data.InsData;
 import com.example.recyclerview_instargram.R;
 
 public class Cf_Item  extends RecyclerView.ViewHolder{
@@ -41,9 +40,9 @@ public class Cf_Item  extends RecyclerView.ViewHolder{
         imageView4.setImageResource(item.getImage4());
 
         textView.setText(item.getName());
-        textView.setText(item.getBrand_name());
-        textView.setText(item.getBrand_color());
-        textView.setText(item.getBrand_price());
+        textView2.setText(item.getBrand_name());
+        textView3.setText(item.getBrand_color());
+        textView4.setText(item.getBrand_price());
 
     }
 }
